@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6fa">
+  <meta name="description" content="Dayflow — персональная система планирования, целей и привычек">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Dayflow">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dayflow — личная система</title>
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Dayflow — главная"><span class="brand-mark">d</span><span>dayflow</span></a>
+      <div class="workspace-label">МОЁ ПРОСТРАНСТВО</div>
+      <nav id="sideNav" class="side-nav" aria-label="Основная навигация"></nav>
+      <div class="sidebar-bottom">
+        <button class="profile-button" data-action="go" data-view="settings">
+          <span class="avatar" id="profileAvatar">D</span><span class="profile-copy"><b id="profileName">Мой профиль</b><small>Настройки и данные</small></span><span class="profile-dots">···</span>
+        </button>
+        <div class="sidebar-footnote"><span class="online-dot"></span> Личное пространство</div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-heading"><div class="eyebrow" id="todayLabel"></div><h1 id="pageTitle">Главная</h1></div>
+        <div class="topbar-actions">
+          <button class="icon-button search-trigger" data-action="search" aria-label="Поиск" title="Поиск">⌕</button>
+          <button class="icon-button mobile-settings" data-action="go" data-view="settings" aria-label="Настройки" title="Настройки">⚙</button>
+          <button class="top-add" data-action="add"><span>＋</span><span>Создать</span></button>
+        </div>
+      </header>
+      <section id="content" class="content" aria-live="polite"></section>
+    </main>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Нижняя навигация"></nav>
+  <button class="mobile-fab" data-action="add" aria-label="Создать">＋</button>
+  <dialog id="modal" class="modal"><div id="modalContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input id="importFile" type="file" accept=".json,.csv,.ics,.xml,application/json,text/csv,text/calendar,application/xml,text/xml" hidden>
+  <script src="app.js"></script>
+</body>
+</html>

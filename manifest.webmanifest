@@ -1,0 +1,21 @@
+{
+  "name": "Dayflow — личная система планирования",
+  "short_name": "Dayflow",
+  "description": "Персональная система задач, календаря, целей и привычек. Работает офлайн.",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f5f6fa",
+  "theme_color": "#f5f6fa",
+  "icons": [
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ],
+  "shortcuts": [
+    {"name":"Новая задача","short_name":"Задача","url":"./?action=task"},
+    {"name":"Календарь","short_name":"Календарь","url":"./?view=calendar"}
+  ]
+}
